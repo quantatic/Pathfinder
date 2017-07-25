@@ -84,9 +84,9 @@ public class Point implements Comparable<Point>{
     public String toString(){
         return "(" + getX() + ", " + getY() + ")";
     }
-
+    
     @Override
-    public int compareTo(Point o){
+    public int compareTo(Point o){ //enables you to just sort the list
         if(getF() < o.getF()){
             return -1;
         }else if(getF() > o.getF()){

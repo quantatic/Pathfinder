@@ -3,6 +3,9 @@
  */
 public class Manhattan implements Heuristic{
     @Override
+    /**
+     * Implements the Manhattan heuristic.
+     */
     public int getDistance(int startX, int startY, int endX, int endY){
         int distX = Math.abs(startX - endX);
         int distY = Math.abs(startY - endY);

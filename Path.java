@@ -7,7 +7,7 @@ import java.util.Iterator;
 public class Path{
     private ArrayList<Point> pathArrayList;
     private int index = 0;
-
+    
     public Path(Point p){ //generates a pathArrayList from a hierarchy of points
         pathArrayList = new ArrayList<Point>();
         while(p != null){

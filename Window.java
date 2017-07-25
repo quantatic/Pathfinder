@@ -32,7 +32,7 @@ public class Window extends JPanel{
         int size = map.getSquareSize();
 
         Graphics2D g2d = (Graphics2D) g;
-        Pathfinder finder = new Pathfinder(new Manhattan());
+        Pathfinder finder = new Pathfinder(new Manhattan()); //we're using the manhattan method here
         PathWrapper path = finder.findPath(startX, startY, endX, endY, map, true);
 
         for(int x = 0; x < map.getWidth(); x++){
@@ -58,7 +58,7 @@ public class Window extends JPanel{
             if(p.getParent() != null){
                 g2d.setColor(Color.black);
                 g2d.drawLine((int)((p.getX() + 0.5) * size), (int)((p.getY() + 0.5) * size), (int)((p.getParent().getX() + 0.5) * size), (int)((p.getParent().getY() + 0.5) * size));
-//                g2d.setFont(g2d.getFont().deriveFont(9.0f));
+//                g2d.setFont(g2d.getFont().deriveFont(9.0f)); //uncomment to show the cost of each square
 //                g2d.drawString(Integer.toString(p.getF()), p.getX() * size, p.getY() * size);
             }
         }
